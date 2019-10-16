@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+</head>
+
+<body>
+    <p>
+        Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order.
+        For example: if the input string is "Hello World and Coders" then your program should return the string sredoC
+        dna dlroW olleH.
+
+    </p>
+    <input type="text" id="inputValue" value="">
+    <button onClick="send()"> Send</button>
+    <p id="inputVal"></p>
+    <script>
+        //Large Complexity solution 1
+        // function FirstReverse(str) {
+
+        //     // code goes here  
+        //     var newArray = [];
+        //     var str1 = "";
+        //     for (i = 0; i < str.length; i++) {
+        //         newArray.push(str.charAt(i))
+
+
+        //     }
+        //     var abc = newArray.reverse();
+        //     console.log(abc);
+        //     for (j = 0; j < abc.length; j++) {
+        //         str1 += abc[j];
+        //     }
+        //     document.getElementById("inputVal").innerHTML = str1;
+        //     return str1;
+
+        // }
+
+        // // keep this function call here
+        function send() {
+            var x = document.getElementById("inputValue").value;
+            console.log(FirstReverse(x));
+        }
+
+        //solution 2
+        //  function FirstReverse(str) {
+
+        //     var str1 =str.split('');
+        //     var str2 =str1.reverse();
+        //     var str3= str2.join('');
+        //     document.getElementById("inputVal").innerHTML = str3;
+        //     return str3;
+
+        // }
+
+
+        //solution 3
+        var newStr = "";
+        function FirstReverse(str) {
+            for (let index = str.length - 1; index >= 0; index--) {
+                const element = str[index];
+                newStr += element
+
+            }
+            document.getElementById("inputVal").innerHTML = newStr;
+            return newStr;
+
+        }
+
+    </script>
+</body>
+
+</html>
