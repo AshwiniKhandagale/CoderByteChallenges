@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+</head>
+
+<body>
+    <p>
+        Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the
+        string. If there are two or more words that are the same length, return the first word from the string with that
+        length. Ignore punctuation and assume sen will not be empty.
+
+    </p>
+    <input type="text" id="inputValue" value="">
+    <button onClick="send()"> Send</button>
+    <p id="inputVal"></p>
+    <script>
+        // // keep this function call here
+        var fact = 1
+        function send() {
+            var x = document.getElementById("inputValue").value;
+            console.log(LongestWord(x));
+        }
+        function LongestWord(sen) {
+            var newArr = sen.split(" ");
+            var word = "";
+            newArr.forEach(element => {
+                if (element.length > word.length) {
+                    word = element;
+
+                }
+            });
+            document.getElementById("inputVal").innerHTML = word;
+            return word;
+        }
+
+    </script>
+</body>
+
+</html>
