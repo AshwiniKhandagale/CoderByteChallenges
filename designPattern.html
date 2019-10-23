@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+</head>
+
+<body>
+    <p>
+        Draw the Design pattern inside the console.
+    </p>
+    <script>
+        var star = '';
+        var num = 6;
+        var m = (num - 1);
+        for (i = 1; i <= num; i++) {
+            star = star.trim();//remove whiteSpaces
+            star = ' '.repeat(m) + star + (i > 1 ? ' ' : '') + '*';
+            console.log(star);
+            m--;
+        }
+    </script>
+    <br>
+
+    <p>
+        Draw one side pyramid
+    </p>
+    <script>
+        console.log("----------------------------------");
+        for (var i = 1; i <= 4; i++) {
+            console.log("*".repeat(i));
+        }
+        console.log("---------------------------------");
+        //Pyramid
+        function pyramid(n) {
+            for (i = 1; i <= n; i++) {
+                let str = ' '.repeat(n - i);
+                let str2 = '*'.repeat(i * 2 - 1);
+                console.log(str + str2 + str);
+            }
+        }
+
+        pyramid(5)
+    </script>
+    <br>
+    <p>Design One side triangle</p>
+    <script>
+        var i, j;
+        for (i = 1; i <= 5; i++) {
+            for (j = 1; j <= i; j++) {
+
+                document.write('*');
+            }
+            document.write('<br />');
+        }
+
+    </script>
+    <p> Number pattern design inside console</p>
+    <script>
+        var num = "";
+        var size = 10;
+        for (var i = 1; i <= size; i++) {
+            num = num + i
+            console.log(num);
+        }
+        console.log("------------------");
+        var totalNumberofRows = 5;
+           var arr;
+        for (var i = 1; i <= totalNumberofRows; i++) {
+            arr = [];
+            for (var j = 1; j <= i; j++) {
+                arr.push(j);
+            }
+            console.log(arr.join(" ") + "\n");
+        }
+        console.log("-------------------------------");
+        var star = '';
+        var newStr='';
+        var num = 6;
+        var m = (num - 1);
+        var newNum=(num - 1)
+        for (i = 1; i <= num; i++) {
+            star = star.trim();//remove whiteSpaces
+            star = ' '.repeat(m) + star + (i > 1 ? ' ' : '') + '*';
+            console.log(star);
+            m--;
+        }
+       
+    </script>
+</body>
+
+</html>
